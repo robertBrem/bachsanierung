@@ -1,0 +1,19 @@
+.content {
+    padding: 10px 35px;
+}
+
+.content .blogEntry {
+    background-color: lightgrey;
+}
+
+.blogEntry .entryContent {
+    margin: 5px 10px;
+}
+
+.comment {
+    display: none;
+}
+
+.createComment {
+    display: none;
+}

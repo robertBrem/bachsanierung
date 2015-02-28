@@ -1,18 +1,26 @@
-/* app css stylesheet */
+* {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
 
 .menu {
+  font-size: 25px;
+  font-weight: bold;
   list-style: none;
+  border-top: 0.1em solid black;
   border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
+  margin-bottom: 1em;
+  padding: 0.5em 0 0.5em 35px;
 }
 
 .menu > li {
@@ -21,7 +29,7 @@
 
 .menu > li:before {
   content: "|";
-  padding-right: 0.3em;
+  padding: 0 1em;
 }
 
 .menu > li:nth-child(1):before {
@@ -29,18 +37,17 @@
   padding: 0;
 }
 
-
-
-* {
-
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.header {
+  background-image: url('images/background.jpg');
+  background-position: top;
+  color: white;
 }
 
 hr.small {
   max-width: 100px;
   margin: 15px auto;
   border-width: 4px;
-  border-color: black;
+  border-color: white;
 }
 
 .blogtitle {
@@ -51,6 +58,8 @@ hr.small {
 }
 
 .blogtitlesmall {
+  padding-bottom: 60px;
   font-size: 20px;
+  margin: 0;
   text-align: center;
 }
