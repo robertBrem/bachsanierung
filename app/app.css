@@ -1,67 +1,19 @@
-* {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin: 0;
-  font-size: 106%;
+/*!
+* Start Bootstrap - Blog Home HTML Template (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.
+*/
+body {
+  padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+footer {
+  margin: 50px 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.menu {
-  font-size: 25px;
-  font-weight: bold;
-  list-style: none;
-  border-top: 0.1em solid black;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 1em;
-  padding: 0.5em 0 0.5em 35px;
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding: 0 1em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
-
-.header {
-  background-image: url('images/background.jpg');
+.rightBanner {
+  background-image: url('images/rightBanner.png');
   background-position: top;
   background-repeat: no-repeat;
-  color: white;
-}
-
-hr.small {
-  max-width: 100px;
-  margin: 15px auto;
-  border-width: 4px;
-  border-color: white;
-}
-
-.blogtitle {
-  padding-top: 50px;
-  margin: 0;
-  font-size: 70px;
-  text-align: center;
-}
-
-.blogtitlesmall {
-  padding-bottom: 60px;
-  font-size: 20px;
-  margin: 0;
-  text-align: center;
+  background-size: 100% auto;
+  min-height: 800px;
 }

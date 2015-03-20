@@ -1,17 +1,36 @@
-<div class="entries" ng-controller="EntriesCtrl">
-    <div class="blogEntry" ng-repeat="entry in entries">
-        <h2>{{entry.title}}</h2>
-        <p class="date">{{entry.date.dayOfMonth}}.{{entry.date.monthValue}}.{{entry.date.year}}</p>
-        <p class="entryContent">{{entry.content}}</p>
-        <div class="comment">
-            <h2>Name des Authors</h2>
-            <h2>Datum</h2>
-            <p>Sein Kommentar!</p>
-        </div>
-        <div class="createComment">
-            <label>Dein Name: </label> <input type="text" />
-            <label>Dein Kommentar: </label> <input type="text" />
-            <input type="button" name="Absenden" />
-        </div>
+<!-- Blog Entries Column -->
+<div class="col-md-8" ng-controller="EntriesCtrl">
+    <h1 class="page-header">
+        Bachsanierungen<br/>
+        <small>In der Gemeinde Kirchberg stehen diverse Bachsanierungen an</small>
+    </h1>
+    <div ng-repeat="entry in entries">
+        <!-- First Blog Post -->
+        <h2>
+            <a href="#">{{entry.title}}</a>
+        </h2>
+
+        <p class="lead">
+            by <a href="index.php">Robert Brem</a>
+        </p>
+
+        <p><span class="glyphicon glyphicon-time"></span>
+            {{entry.date.dayOfMonth}}.{{entry.date.monthValue}}.{{entry.date.year}}</p>
+        <hr>
+        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+        <hr>
+        <p>{{entry.content}}</p>
+        <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+        <hr>
     </div>
+
+    <!-- Pager -->
+    <ul class="pager">
+        <li class="previous">
+            <a href="#">&larr; Older</a>
+        </li>
+        <li class="next">
+            <a href="#">Newer &rarr;</a>
+        </li>
+    </ul>
 </div>
