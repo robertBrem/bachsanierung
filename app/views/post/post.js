@@ -10,7 +10,7 @@ postApp.config(['$routeProvider', function($routeProvider) {
 }]);
 
 postApp.controller('PostCtrl', function($scope, $http) {
-  $http.get("http://localhost:8080/entryservice/resources/entries").then(function(response) {
-    $scope.entries = response.data;
+  $http.get("http://localhost:8080/entryservice/resources/entries/1").then(function(response) {
+    $scope.entry = response.data;
   });
 });
