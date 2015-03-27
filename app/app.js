@@ -6,6 +6,8 @@ angular.module('myApp', [
     'myApp.view1',
     'myApp.view2',
     'myApp.bachprojekte',
+    'myApp.elementargefahren',
+    'myApp.verein',
     'myApp.post'
 ]).
     config(['$routeProvider', function ($routeProvider) {

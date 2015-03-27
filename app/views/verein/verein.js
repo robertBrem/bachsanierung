@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('myApp.bachprojekte', ['ngRoute'])
+angular.module('myApp.verein', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/bachprojekte', {
-    templateUrl: 'views/bachprojekte/bachprojekte.html',
+  $routeProvider.when('/verein', {
+    templateUrl: 'views/verein/verein.html',
     controller: 'View2Ctrl'
   });
 }])

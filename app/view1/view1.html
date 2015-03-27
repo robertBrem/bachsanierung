@@ -2,16 +2,16 @@
 <div class="col-md-8" ng-controller="EntriesCtrl">
     <h1 class="page-header">
         Bachsanierungen Kirchberg SG<br/>
-        <small>Faire Bachprojekte - ohne Perimeter</small>
+        <small>Faire Bachprojekte - ohne Perimeter!</small>
     </h1>
     <div ng-repeat="entry in entries">
         <!-- First Blog Post -->
         <h2>
-            <a href="#">{{entry.title}}</a>
+            <a href="#/post">{{entry.title}}</a>
         </h2>
 
         <p class="lead">
-            by <a href="index.php">Robert Brem</a>
+            by Robert Brem
         </p>
 
         <p><span class="glyphicon glyphicon-time"></span>
@@ -24,13 +24,12 @@
         <hr>
     </div>
 
-    <!-- Pager -->
-    <ul class="pager">
+    <!-- ul class="pager">
         <li class="previous">
             <a href="#">&larr; Ältere Beiträge</a>
         </li>
         <li class="next">
             <a href="#">Neuere Beiträge &rarr;</a>
         </li>
-    </ul>
+    </ul -->
 </div>
