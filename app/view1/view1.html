@@ -1,8 +1,8 @@
 <!-- Blog Entries Column -->
 <div class="col-md-8" ng-controller="EntriesCtrl">
     <h1 class="page-header">
-        Bachsanierungen<br/>
-        <small>In der Gemeinde Kirchberg stehen diverse Bachsanierungen an</small>
+        Bachsanierungen Kirchberg SG<br/>
+        <small>Faire Bachprojekte - ohne Perimeter</small>
     </h1>
     <div ng-repeat="entry in entries">
         <!-- First Blog Post -->
@@ -17,20 +17,20 @@
         <p><span class="glyphicon glyphicon-time"></span>
             erstellt am {{entry.date.dayOfMonth}}.{{entry.date.monthValue}}.{{entry.date.year}} um {{entry.date.hour}}:{{entry.date.minute}}</p>
         <hr>
-        <img class="img-responsive" src="images/Titelpost.png" alt="">
+        <img class="img-responsive" src="images/bachNahaufnahme.png" alt="">
         <hr>
         <p>{{entry.teaser}}</p>
-        <a class="btn btn-primary" href="#/post">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+        <a class="btn btn-primary" href="#/post">Mehr zu diesem Thema <span class="glyphicon glyphicon-chevron-right"></span></a>
         <hr>
     </div>
 
     <!-- Pager -->
     <ul class="pager">
         <li class="previous">
-            <a href="#">&larr; Older</a>
+            <a href="#">&larr; Ältere Beiträge</a>
         </li>
         <li class="next">
-            <a href="#">Newer &rarr;</a>
+            <a href="#">Neuere Beiträge &rarr;</a>
         </li>
     </ul>
 </div>

@@ -10,7 +10,7 @@ entriesApp.config(['$routeProvider', function($routeProvider) {
 }]);
 
 entriesApp.controller('EntriesCtrl', function($scope, $http) {
-  $http.get("http://localhost:8080/entryservice/resources/entries").then(function(response) {
+  $http.get("http://104.167.98.125:8080/entryservice/resources/entries").then(function(response) {
     $scope.entries = response.data;
   });
 });
