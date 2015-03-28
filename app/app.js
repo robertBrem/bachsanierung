@@ -8,6 +8,7 @@ angular.module('myApp', [
     'myApp.bachprojekte',
     'myApp.elementargefahren',
     'myApp.verein',
+    'myApp.admin',
     'myApp.post'
 ]).
     config(['$routeProvider', function ($routeProvider) {
