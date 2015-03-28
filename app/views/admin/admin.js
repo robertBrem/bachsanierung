@@ -13,7 +13,7 @@ adminApp.config(['$routeProvider', function ($routeProvider) {
 
 adminApp.controller('AdminCtrl', function ($scope, $http) {
     $scope.create = function(entry) {
-        var content = entry.content.replace(/(?:\r\n|\r|\n)/g, ' ');
+        var content = entry.content.replace(/(?:\r\n|\r|\n)/g, '<br />');
 
         $http.post('http://104.167.98.125:8080/entryservice/resources/entries/',
             '{"title":"' + entry.title + '", "teaser":"' + entry.teaser + '", "content":"' + content + '"}')
