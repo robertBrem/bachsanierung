@@ -9,10 +9,14 @@ adminApp.config(['$routeProvider', function ($routeProvider) {
     });
 }]);
 
+// 'http://104.167.98.125:8080/entryservice/resources/entries/'
+
 adminApp.controller('AdminCtrl', function ($scope, $http) {
     $scope.create = function(entry) {
+        var content = entry.content.replace(/(?:\r\n|\r|\n)/g, ' ');
+
         $http.post('http://104.167.98.125:8080/entryservice/resources/entries/',
-            '{"title":"' + entry.title + '", "teaser":"' + entry.teaser + '", "content":"' + entry.content + '"}')
+            '{"title":"' + entry.title + '", "teaser":"' + entry.teaser + '", "content":"' + content + '"}')
             .then(function(response) {
                 $scope.created = response.data;
             });
