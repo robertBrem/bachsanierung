@@ -1,6 +1,6 @@
 'use strict';
 
-var postApp = angular.module('myApp.post', ['ngRoute', 'ngSanitize']);
+var postApp = angular.module('myApp.post', ['ngRoute', 'ngSanitize', 'configuration']);
 
 postApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/post/:id', {
@@ -9,8 +9,8 @@ postApp.config(['$routeProvider', function ($routeProvider) {
     });
 }]);
 
-postApp.controller('PostCtrl', function ($scope, $http, $routeParams) {
-    $http.get("http://104.167.98.125:8080/entryservice/resources/entries/" + $routeParams.id).then(function (response) {
+postApp.controller('PostCtrl', function ($scope, $http, $routeParams, ENTRY_URL) {
+    $http.get(ENTRY_URL + $routeParams.id).then(function (response) {
         $scope.entry = response.data;
         $scope.content = response.data.content;
     });

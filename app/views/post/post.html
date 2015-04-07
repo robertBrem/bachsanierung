@@ -1,7 +1,7 @@
 <div class="col-lg-8" ng-controller="PostCtrl">
     <h1>{{entry.title}}</h1>
     <p class="lead">
-        von <a href="mailto:info@bachsanierung.ch">Robert Brem</a>
+        von <a href="mailto:info@bachsanierung.ch">{{entry.author}}</a>
     </p>
     <hr>
     <p><span class="glyphicon glyphicon-time"></span> erstellt am {{entry.date.dayOfMonth}}.{{entry.date.monthValue}}.{{entry.date.year}} um {{entry.date.hour}}:{{entry.date.minute}}</p>

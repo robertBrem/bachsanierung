@@ -9,22 +9,29 @@ body {
 }
 
 .navbar-inverse {
-  background-color: #add8e6;
+  background-color: #337AB7;
 }
 
-.navbar-inverse .navbar-brand:hover {
-  color: darkblue;
+.navbar-inverse .navbar-nav > li > a {
+  color: #ccccff;
 }
 .navbar-inverse .navbar-nav > li > a:hover {
-  color: darkblue;
+  color: #ffffff;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #ccccff;
+}
+.navbar-inverse .navbar-brand:hover {
+  color: #ffffff;
 }
 
 .navbar-brand {
-  font-size: 200%;
+  font-size: 180%;
   font-weight: bold;
 }
 .navbar-collapse {
-  font-size: 200%;
+  font-size: 180%;
   font-weight: bold;
 }
 
