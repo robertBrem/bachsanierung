@@ -14,4 +14,12 @@ postApp.controller('PostCtrl', function ($scope, $http, $routeParams, ENTRY_URL)
         $scope.entry = response.data;
         $scope.content = response.data.content;
     });
+
+    $scope.create = function (comment) {
+        $http.post(ENTRY_URL + $routeParams.id + '/comments',
+            '{"username":"' + comment.username + '", "comment":"' + comment.comment + '"}')
+            .then(function (response) {
+                $scope.entry.comments.push(response.data);
+            });
+    };
 });

@@ -1,42 +1,60 @@
 <div class="col-lg-8" ng-controller="PostCtrl">
     <h1>{{entry.title}}</h1>
+
     <p class="lead">
         von <a href="mailto:info@bachsanierung.ch">{{entry.author}}</a>
     </p>
     <hr>
-    <p><span class="glyphicon glyphicon-time"></span> erstellt am {{entry.date.dayOfMonth}}.{{entry.date.monthValue}}.{{entry.date.year}} um {{entry.date.hour}}:{{entry.date.minute}}</p>
+    <p><span class="glyphicon glyphicon-time"></span> erstellt am
+        {{entry.date.dayOfMonth}}.{{entry.date.monthValue}}.{{entry.date.year}} um
+        {{entry.date.hour}}:{{entry.date.minute}}</p>
     <hr>
     <img class="img-responsive" src="images/bachNahaufnahme.png" alt="">
     <hr>
     <p class="lead">{{entry.teaser}}</p>
 
     <div ng-bind-html="content"></div>
+
     <hr>
-    <!-- div class="well">
-        <h4>Leave a Comment:</h4>
+    <div class="well">
+        <h4>Kommentar:</h4>
 
         <form role="form">
             <div class="form-group">
-                <textarea class="form-control" rows="3"></textarea>
+                <label for="inputAuthor">Autor</label>
+                <input type="text" class="form-control" id="inputAuthor"
+                       placeholder="Verfasser des Kommentars"
+                       ng-model="comment.username"/>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div class="form-group">
+                <label for="inputContent">Inhalt</label>
+                <textarea class="form-control" rows="4" id="inputContent"
+                          placeholder="Der gesamte Kommentar!" ng-model="comment.comment"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" ng-click="create(comment)" class="btn btn-primary">Eintragen <span
+                        class="glyphicon glyphicon-chevron-right"></button>
+            </div>
         </form>
     </div>
+
     <hr>
-    <div class="media">
+    <div class="media" ng-repeat="comment in entry.comments | orderBy:'-date'">
         <a class="pull-left" href="#">
             <img class="media-object" src="http://placehold.it/64x64" alt="">
         </a>
 
         <div class="media-body">
-            <h4 class="media-heading">Start Bootstrap
-                <small>August 25, 2014 at 9:30 PM</small>
+            <h4 class="media-heading">{{ comment.username }}
+                <small>{{comment.date | date:"'erstellt am' dd.mm.yyyy 'um' hh:mm"}}
+                </small>
             </h4>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras
-            purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-            fringilla. Donec lacinia congue felis in faucibus.
+            {{ comment.comment }}
         </div>
     </div>
+    <!--
     <div class="media">
         <a class="pull-left" href="#">
             <img class="media-object" src="http://placehold.it/64x64" alt="">
@@ -64,5 +82,6 @@
                 </div>
             </div>
         </div>
-    </div -->
+    </div>
+    -->
 </div>
