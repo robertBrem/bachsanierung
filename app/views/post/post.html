@@ -5,9 +5,7 @@
         von <a href="mailto:info@bachsanierung.ch">{{entry.author}}</a>
     </p>
     <hr>
-    <p><span class="glyphicon glyphicon-time"></span> erstellt am
-        {{entry.date.dayOfMonth}}.{{entry.date.monthValue}}.{{entry.date.year}} um
-        {{entry.date.hour}}:{{entry.date.minute}}</p>
+    <p><span class="glyphicon glyphicon-time"></span> {{entry.date | date:"'erstellt am' dd.MM.yyyy 'um' hh:mm"}}</p>
     <hr>
     <img class="img-responsive" src="images/bachNahaufnahme.png" alt="">
     <hr>
@@ -42,13 +40,13 @@
 
     <hr>
     <div class="media" ng-repeat="comment in entry.comments | orderBy:'-date'">
-        <a class="pull-left" href="#">
-            <img class="media-object" src="http://placehold.it/64x64" alt="">
-        </a>
+        <span class="pull-left">
+            <img class="media-object" src="images/smallPic.png" alt="">
+        </span>
 
         <div class="media-body">
             <h4 class="media-heading">{{ comment.username }}
-                <small>{{comment.date | date:"'erstellt am' dd.mm.yyyy 'um' hh:mm"}}
+                <small>{{comment.date | date:"'erstellt am' dd.MM.yyyy 'um' hh:mm"}}
                 </small>
             </h4>
             {{ comment.comment }}
