@@ -17,7 +17,7 @@ postApp.controller('PostCtrl', function ($scope, $http, $routeParams, ENTRY_URL)
 
     $scope.create = function (comment) {
         $http.post(ENTRY_URL + $routeParams.id + '/comments',
-            '{"username":"' + comment.username + '", "comment":"' + comment.comment + '"}')
+            '{"author":"' + comment.author + '", "content":"' + comment.content + '"}')
             .then(function (response) {
                 $scope.entry.comments.push(response.data);
             });

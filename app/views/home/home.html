@@ -3,7 +3,7 @@
         Bachsanierungen Kirchberg SG<br/>
         <small>Faire Bachprojekte - ohne Perimeter!</small>
     </h1>
-    <div ng-repeat="entry in entries | orderBy:'-date'">
+    <div ng-repeat="entry in entries | orderBy:'-creationDate'">
         <h2>
             <a href="#/post/{{entry.id}}">{{entry.title}}</a>
         </h2>
@@ -13,7 +13,7 @@
         </p>
 
         <p><span class="glyphicon glyphicon-time"></span>
-            erstellt am {{entry.date | date:"'erstellt am' dd.MM.yyyy 'um' hh:mm"}}</p>
+            {{entry.creationDate | date:"'erstellt am' dd.MM.yyyy 'um' HH:mm"}}</p>
         <hr>
         <img class="img-responsive" src="images/bachNahaufnahme.png" alt="">
         <hr>
