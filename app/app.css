@@ -4,45 +4,57 @@
 * For details, see http://www.apache.org/licenses/LICENSE-2.0.
 */
 body {
-  padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-  background-color: #fafafa;
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-color: #fafafa;
 }
 
 .navbar-inverse {
-  background-color: #337AB7;
+    background-color: #337AB7;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #ccccff;
+    color: #ccccff;
 }
+
 .navbar-inverse .navbar-nav > li > a:hover {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #ccccff;
+    color: #ccccff;
 }
+
 .navbar-inverse .navbar-brand:hover {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .navbar-brand {
-  font-size: 180%;
-  font-weight: bold;
+    font-size: 180%;
+    font-weight: bold;
 }
+
 .navbar-collapse {
-  font-size: 180%;
-  font-weight: bold;
+    font-size: 180%;
+    font-weight: bold;
 }
 
 footer {
-  margin: 50px 0;
+    margin: 50px 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    clear: right;
+    max-width: 100%;
+
+    padding-bottom: 1em;
 }
 
 .rightBanner {
-  background-image: url('images/rightBanner.png');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  min-height: 800px;
+    background-image: url('images/rightBanner.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    min-height: 800px;
 }
